@@ -8,7 +8,7 @@ const colors = d3.scaleOrdinal(d3.schemeCategory10);
 
 const svgWidth = 960;
 const svgHeight = 400;
-const margin = { top: 20, right: 20, bottom: 40, left: 40 };
+const margin = { top: 20, right: 20, bottom: 80, left: 40 };
 const svg = d3.select('#sales-graph')
   .append('svg')
   .attr('id', 'chart')
@@ -61,7 +61,7 @@ function drawAxisLegend(salesData) {
   g.append('g')
     .attr('class', 'axis axis--y')
     .attr('transform', `translate(0, 0)`)
-    .call(d3.axisLeft(scaleY).ticks(8)); 
+    .call(d3.axisLeft(scaleY).ticks(8));
 
   // split products into separate object of sales  
   const salesObj = salesData.reduce((last, sale) => {
@@ -75,9 +75,13 @@ function drawAxisLegend(salesData) {
     return last;
   }, {});
 
+  let products = [];
   Object.keys(salesObj).forEach((sale, index) => {
     drawLine(index, sale, salesObj[sale], scaleX, scaleY);
+    products.push(sale);
   });
+
+  drawLegend(products);
 
 }
 
@@ -86,7 +90,7 @@ function drawLine(index, product, sale, scaleX, scaleY) {
   const line = d3.line()
     .x(d => (scaleX(d[MONTH]) + scaleX.bandwidth() / 2))
     .y(d => scaleY(d[SALES]));
-  
+
   const lineG = g.append('g');
   lineG.append('path')
     .attr('d', line(sale.data))
@@ -94,23 +98,67 @@ function drawLine(index, product, sale, scaleX, scaleY) {
     .attr('stroke-width', 2)
     .attr('fill', 'none');
 
-  lineG.selectAll('circle')
+  lineG.selectAll('circle.cir')
     .data(sale.data)
     .enter()
     .append('circle')
+    .attr('class', 'cir')
     .attr('cx', d => (scaleX(d[MONTH]) + scaleX.bandwidth() / 2))
     .attr('cy', d => scaleY(d[SALES]))
     .attr('r', 3)
     .attr('fill', colors(index))
     .attr('cursor', 'pointer')
-    .on('mouseover', function(d) {
+    .on('mouseover', function (d) {
       d3.select(this).attr('r', 5);
     })
-    .on('mouseout', function(d) {
-      d3.select(this).attr('r', 3);
+    .on('mouseout', function (d) {
+      if(!d3.select(this).classed('selected')) {
+        d3.select(this).attr('r', 3);
+      }
+    })
+    .on('click', function(d, i) {
+      d3.selectAll('circle.cir')
+        .classed('selected', false)
+        .attr('fill', '#aaa')
+        .attr('r', 3);
+      d3.select(this)
+        .classed('selected', true)
+        .attr('fill', (d, i) => colors(i))
+        .attr('r', 5);
     })
     .append("svg:title")
-    .text(d => `Sales: ${d[SALES]}, Gross: ${d[GROSS]}`);  
+    .text(d => `Sales: ${d[SALES]}, Gross: ${d[GROSS]}`);
+}
+
+function drawLegend(products) {
+  let legend = svg.append('g')
+    .attr('transform', `translate(0,${svgHeight - 10})`)
+    .attr('class', 'legend');
+
+  let legendScale = d3.scaleBand()
+    .domain(d3.range(products.length))
+    .rangeRound([0, svgWidth - margin.right])
+    .padding(2);
+  
+  legend.selectAll('line')
+    .data(products)
+    .enter()
+    .append('line')
+    .attr('x1', (d, i) => legendScale(i))
+    .attr('y1', -3)
+    .attr('x2', (d, i) => legendScale(i)+50)
+    .attr('y2', -3)
+    .attr('stroke', (d, i) => colors(i))
+    .attr('stroke-width', 5);
+
+  legend.selectAll('text')
+    .data(products)
+    .enter()
+    .append('text')
+    .attr('x', (d, i) => legendScale(i) + 55)
+    .attr('y', 0)
+    .attr('font-size', '14px')
+    .text(d => d)
 }
 
 

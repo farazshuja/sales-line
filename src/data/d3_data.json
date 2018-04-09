@@ -1,0 +1,220 @@
+{
+	"Sales": [
+        {
+			"Product Name": "product 1",
+			"Month": "Jan 2016",
+			"Sales Amount (k)": 1400,
+			"Gross Profit (k)": 256
+		},
+		{
+			"Product Name": "product 1",
+			"Month": "Feb 2016",
+			"Sales Amount (k)": 2355,
+			"Gross Profit (k)": 278
+		},
+		{
+			"Product Name": "product 1",
+			"Month": "Mar 2016",
+			"Sales Amount (k)": 2200,
+			"Gross Profit (k)": 286
+		},
+		{
+			"Product Name": "product 1",
+			"Month": "Apr 2016",
+			"Sales Amount (k)": 1600,
+			"Gross Profit (k)": 266
+		},
+		{
+			"Product Name": "product 1",
+			"Month": "May 2016",
+			"Sales Amount (k)": 2835,
+			"Gross Profit (k)": 270
+		},
+		{
+			"Product Name": "product 1",
+			"Month": "Jun 2016",
+			"Sales Amount (k)": 1567,
+			"Gross Profit (k)": -202
+		},
+		{
+			"Product Name": "product 1",
+			"Month": "Jul 2016",
+			"Sales Amount (k)": 850,
+			"Gross Profit (k)": 145
+		},
+		{
+			"Product Name": "product 1",
+			"Month": "Aug 2016",
+			"Sales Amount (k)": 1952,
+			"Gross Profit (k)": 259
+		},
+		{
+			"Product Name": "product 1",
+			"Month": "Sep 2016",
+			"Sales Amount (k)": 1544,
+			"Gross Profit (k)": 250
+		},
+		{
+			"Product Name": "product 1",
+			"Month": "Oct 2016",
+			"Sales Amount (k)": 1386,
+			"Gross Profit (k)": 346
+		},
+		{
+			"Product Name": "product 1",
+			"Month": "Nov 2016",
+			"Sales Amount (k)": 2876,
+			"Gross Profit (k)": 370
+		},
+		{
+			"Product Name": "product 1",
+			"Month": "Dec 2016",
+			"Sales Amount (k)": 2505,
+			"Gross Profit (k)": 377
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "Jan 2016",
+			"Sales Amount (k)": 910,
+			"Gross Profit (k)": 284
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "Feb 2016",
+			"Sales Amount (k)": 902,
+			"Gross Profit (k)": 355
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "Mar 2016",
+			"Sales Amount (k)": 880,
+			"Gross Profit (k)": 342
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "Apr 2016",
+			"Sales Amount (k)": 870,
+			"Gross Profit (k)": 387
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "May 2016",
+			"Sales Amount (k)": 820,
+			"Gross Profit (k)": 342
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "Jun 2016",
+			"Sales Amount (k)": 665,
+			"Gross Profit (k)": 287
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "Jul 2016",
+			"Sales Amount (k)": 548,
+			"Gross Profit (k)": 296
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "Aug 2016",
+			"Sales Amount (k)": 526,
+			"Gross Profit (k)": 297
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "Sep 2016",
+			"Sales Amount (k)": 608,
+			"Gross Profit (k)": 302
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "Oct 2016",
+			"Sales Amount (k)": 613,
+			"Gross Profit (k)": 307
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "Nov 2016",
+			"Sales Amount (k)": 783,
+			"Gross Profit (k)": 312
+		},
+		{
+			"Product Name": "product 2",
+			"Month": "Dec 2016",
+			"Sales Amount (k)": 903,
+			"Gross Profit (k)": 332
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "Jan 2016",
+			"Sales Amount (k)": 402,
+			"Gross Profit (k)": 283
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "Feb 2016",
+			"Sales Amount (k)": 202,
+			"Gross Profit (k)": 135
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "Mar 2016",
+			"Sales Amount (k)": 333,
+			"Gross Profit (k)": 236
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "Apr 2016",
+			"Sales Amount (k)": 325,
+			"Gross Profit (k)": 225
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "May 2016",
+			"Sales Amount (k)": 541,
+			"Gross Profit (k)": 373
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "Jun 2016",
+			"Sales Amount (k)": 678,
+			"Gross Profit (k)": 475
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "Jul 2016",
+			"Sales Amount (k)": 950,
+			"Gross Profit (k)": 665
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "Aug 2016",
+			"Sales Amount (k)": 915,
+			"Gross Profit (k)": 641
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "Sep 2016",
+			"Sales Amount (k)": 820,
+			"Gross Profit (k)": 572
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "Oct 2016",
+			"Sales Amount (k)": 754,
+			"Gross Profit (k)": 527
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "Nov 2016",
+			"Sales Amount (k)": 652,
+			"Gross Profit (k)": 453
+		},
+		{
+			"Product Name": "product 3",
+			"Month": "Dec 2016",
+			"Sales Amount (k)": 502,
+			"Gross Profit (k)": 352
+		}
+	]
+}

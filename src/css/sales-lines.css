@@ -1,0 +1,13 @@
+.chart-title {
+  font-size: 24px;
+  text-anchor: middle;
+}
+
+.axis-label-title {
+  transform: rotate(-90deg);
+  text-anchor: middle;
+}
+
+.legend-text {
+  font-size: 14px
+}
